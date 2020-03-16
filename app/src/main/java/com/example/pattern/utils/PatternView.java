@@ -13,6 +13,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
@@ -116,12 +117,28 @@ public class PatternView extends ViewGroup {
         canvas.drawBitmap(bitmap, 0, 0, null);
     }
 
+
+    final PatternView Coord = (PatternView) findViewById(R.id.patternView);
     @Override
     public boolean onTouchEvent(MotionEvent event){
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                Log.d("x", String.valueOf((int) Coord.getX()));
             case MotionEvent.ACTION_MOVE:
                 NodeView nodeAt = getNodeAt(event.getX(), event.getY());
+
+                //MY CODE:
+                Log.d("y", String.valueOf((int) Coord.getY()));
+
+                float hs = event.getHistorySize();   // returns the number of data points stored as an int
+                float hx = event.getX(0);
+                float hy = event.getY(0);
+                String x = String.valueOf(hx);
+                String y = String.valueOf(hx);
+                Log.d("x", x);
+                Log.d("y", y);
+                //MY CODE ^
+
                 if (nodeAt == null && currentNode == null) {
                     return true;
                 } else {

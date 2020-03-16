@@ -21,13 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private static String PATTERN_KEY;
     SharedPreferences prefs;
 
-    MotionEvent ev;
-    float x;
-    float y;
-    float press;
-    float toucharea;
-    String message;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +48,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 /*
+    //COORDS
+     final PatternView Coord = (PatternView) findViewById(R.id.patternView);
+
+        final View touchView = findViewById(R.id.patternView);
+        touchView.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                final int action = event.getAction();
+                switch (action & MotionEvent.ACTION_MASK) {
+
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("x", String.valueOf((int) Coord.getX()));
+                        break;
+                    }
+
+                    case MotionEvent.ACTION_MOVE:{
+                        Log.d("y", String.valueOf((int) Coord.getY()));
+                        break;
+                    }
+                }
+                return true;
+
+            }
+
+        });
+        //COORDS
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
