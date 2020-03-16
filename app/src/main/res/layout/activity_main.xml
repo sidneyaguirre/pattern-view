@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "#ff222233">
+    android:background="#ff222233">
     tools:context=".MainActivity">
 
     <com.example.pattern.utils.PatternView
-        android:id = "@+id/patternView"
+        android:id="@+id/patternView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity = "center"
-        app:nodeSrc="@drawable/dot_normal"
-        app:nodeOnSrc="@drawable/dot_highlited"
-        app:lineColor="#ff006699"
-        app:lineWidth="8dp"/>
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColor="#ffffff"
+        app:lineWidth="4dp"
+        app:nodeOnSrc="@drawable/dot"
+        app:nodeSrc="@drawable/dot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

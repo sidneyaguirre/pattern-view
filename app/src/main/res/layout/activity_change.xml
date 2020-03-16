@@ -23,16 +23,6 @@
         android:layout_gravity="center"
         tools:ignore="MissingConstraints">
 
-        <com.example.pattern.utils.PatternView
-            android:id="@+id/patternView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lineColor="#ff006699"
-            app:lineWidth="8dp"
-            app:nodeOnSrc="@drawable/dot_highlited"
-            app:nodeSrc="@drawable/dot_normal" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
@@ -47,11 +37,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:lineColor="#ff006699"
-            app:lineWidth="8dp"
-            app:nodeOnSrc="@drawable/dot_highlited"
-            app:nodeSrc="@drawable/dot_normal" />
+            app:lineColor="#ffffff"
+            app:lineWidth="4dp"
+            app:nodeOnSrc="@drawable/dot"
+            app:nodeSrc="@drawable/dot" />
     </FrameLayout>
+
+    <com.example.pattern.utils.PatternView
+        android:id="@+id/patternView"
+        android:layout_width="wrap_content"
+        android:layout_height="411dp"
+        app:layout_constraintBottom_toBottomOf="@+id/enterPattern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColor="#ffffff"
+        app:lineWidth="4dp"
+        app:nodeOnSrc="@drawable/dot"
+        app:nodeSrc="@drawable/dot" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

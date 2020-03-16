@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 //import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private static String MY_PREFS_NAME = "PatternLock";
     private static String PATTERN_KEY;
     SharedPreferences prefs;
+
+    MotionEvent ev;
+    float x;
+    float y;
+    float press;
+    float toucharea;
+    String message;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 /*
