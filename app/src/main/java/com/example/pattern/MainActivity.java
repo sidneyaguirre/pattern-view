@@ -52,32 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 /*
-    //COORDS
-     final PatternView Coord = (PatternView) findViewById(R.id.patternView);
-
-        final View touchView = findViewById(R.id.patternView);
-        touchView.setOnTouchListener(new View.OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-                final int action = event.getAction();
-                switch (action & MotionEvent.ACTION_MASK) {
-
-                    case MotionEvent.ACTION_DOWN: {
-                        Log.d("x", String.valueOf((int) Coord.getX()));
-                        break;
-                    }
-
-                    case MotionEvent.ACTION_MOVE:{
-                        Log.d("y", String.valueOf((int) Coord.getY()));
-                        break;
-                    }
-                }
-                return true;
-
-            }
-
-        });
-        //COORDS
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,16 +62,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.contact:
-                new AlertDialog.Builder(this)
-                        .setTitle("Android-Lock9View")
-                        .setMessage(
-                                "Email : anfersyed@gmail.com\n" +
-                                        "Blog  : http://android-delight.blogspot.in/\n")
-                        .setPositiveButton("OK", null)
-                        .show();
-                return true;
-
             case R.id.create_new_pattern:
                 Intent intent = new Intent(MainActivity.this, ChangeActivity.class);
                 startActivity(intent);

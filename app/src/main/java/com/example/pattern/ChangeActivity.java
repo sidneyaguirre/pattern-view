@@ -69,28 +69,6 @@ public class ChangeActivity extends AppCompatActivity {
         }
     });
 
-    //following methods should be here?
-
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_change, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.contact:
-                new AlertDialog.Builder(this)
-                        .setTitle("Android-Lock9View")
-                        .setMessage(
-                                "Email : anfersyed@gmail.com"
-                                        +"\nBlog  : http://android-delight.blogspot.in/")
-                        .setPositiveButton("OK", null).show();
-                return true;
-            default: return super.onOptionsItemSelected(item);
-        }
-    }*/
 }
