@@ -118,26 +118,31 @@ public class PatternView extends ViewGroup {
     }
 
 
-    final PatternView Coord = (PatternView) findViewById(R.id.patternView);
     @Override
     public boolean onTouchEvent(MotionEvent event){
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d("x", String.valueOf((int) Coord.getX()));
             case MotionEvent.ACTION_MOVE:
                 NodeView nodeAt = getNodeAt(event.getX(), event.getY());
 
-                //MY CODE:
-                Log.d("y", String.valueOf((int) Coord.getY()));
+                //get behavioral data:
+                float coordinateX = event.getX(0);
+                float coordinateY = event.getY(0);
+                long nanoSeconds = System.currentTimeMillis();
+                float pressure = event.getPressure(0);
+                float size = event.getSize();
+                long downTime = event.getDownTime();
+                long eventTime = event.getEventTime();
 
-                float hs = event.getHistorySize();   // returns the number of data points stored as an int
-                float hx = event.getX(0);
-                float hy = event.getY(0);
-                String x = String.valueOf(hx);
-                String y = String.valueOf(hx);
-                Log.d("x", x);
-                Log.d("y", y);
-                //MY CODE ^
+
+                Log.d("X en", String.valueOf(coordinateX));
+                Log.d("Y en", String.valueOf(coordinateY));
+                Log.d("NanoTime", String.valueOf(nanoSeconds));
+                Log.d("pressure", String.valueOf(pressure));
+                Log.d("size", String.valueOf(size));
+                Log.d("downTime", String.valueOf(downTime));
+                Log.d("eventTime", String.valueOf(eventTime));
+                //END get behavioral data
 
                 if (nodeAt == null && currentNode == null) {
                     return true;
